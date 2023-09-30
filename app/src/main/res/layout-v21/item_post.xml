@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ghasemi.abbas.unfollowyab.components.AutoHeightView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.farasource.component.wait.WaitingBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        app:indicator="circleWave"
+        app:indicatorColor="@color/colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/video"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/post_video_bg"
+        android:padding="4dp"
+        android:src="@drawable/ic_video"
+        android:visibility="gone" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="1dp"
+        android:background="@drawable/post_like_bg"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:text=""
+        android:textSize="12dp"
+        app:color="#fff" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_margin="1dp"
+        android:background="@drawable/post_comment_bg"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:text="sss"
+        android:textSize="12dp"
+        android:visibility="gone"
+        app:color="#fff" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_margin="1dp"
+        android:background="@drawable/post_view_bg"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:text="sss"
+        android:textSize="12dp"
+        android:visibility="gone"
+        app:color="#fff" />
+
+    <View
+        android:id="@+id/onClick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackground" />
+</ghasemi.abbas.unfollowyab.components.AutoHeightView>

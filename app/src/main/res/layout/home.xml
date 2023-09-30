@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/root_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <ghasemi.abbas.unfollowyab.components.roundedimageview.RoundedImageView
+                    android:id="@+id/pic"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_border_color="@color/colorPrimaryDark"
+                    app:riv_border_width="2dp"
+                    app:riv_oval="true" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:id="@+id/username"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="abbas ghasemi"
+                    android:textSize="12sp"
+                    app:color="#000" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/pic"
+                    android:layout_alignBottom="@id/pic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/pic"
+                    android:gravity="left|center_vertical">
+
+                    <ghasemi.abbas.unfollowyab.components.TextView
+                        android:id="@+id/media_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/selectable_item_background"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="5dp"
+                        android:text="24 فالوور"
+                        app:color="#000" />
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_toRightOf="@+id/media_count"
+                        android:background="#4D768D97" />
+
+                    <ghasemi.abbas.unfollowyab.components.TextView
+                        android:id="@+id/follower_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/v1"
+                        android:background="@drawable/selectable_item_background"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="5dp"
+                        android:text="24 فالوئینگ"
+                        app:color="#000" />
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/follower_count"
+                        android:background="#4D768D97" />
+
+                    <ghasemi.abbas.unfollowyab.components.TextView
+                        android:id="@+id/following_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/v2"
+                        android:background="@drawable/selectable_item_background"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="5dp"
+                        android:text="24 پست"
+                        app:color="#000" />
+
+                    <ghasemi.abbas.unfollowyab.components.TextView
+                        android:id="@+id/full_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/following_count"
+                        android:layout_marginTop="-5dp"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="abbas ghasemi"
+                        android:textSize="12sp"
+                        app:color="#000" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/last_check"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/back_last_check"
+                android:drawableLeft="@drawable/ic_refresh"
+                android:gravity="right|center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="آخرین بروزرسانی: به تازگی"
+                app:color="@color/colorPrimaryDark" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/helpFollower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="4dp"
+                android:text="نمودار تغییرات فالوور و فالوئینگ برحسب بروزرسانی"
+                app:color="#000" />
+
+            <FrameLayout
+                android:id="@+id/chart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <im.dacer.androidcharts.LineView
+                        android:id="@+id/chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+                </HorizontalScrollView>
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:id="@+id/no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:gravity="center"
+                    android:text="داده ای برای نمایش وجود ندارد." />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="#2196F3" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="followers" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#E91E63" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="following" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

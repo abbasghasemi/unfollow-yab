@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_dialog"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ghasemi.abbas.unfollowyab.components.roundedimageview.RoundedImageView
+        android:id="@+id/remove_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/remove_user"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius="30dp" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/remove_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:text=""
+        app:bold="true"
+        app:color="#000" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/help2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="توجه داشته باشید، کاربر مورد نظر از لیست فالوورهای شما در اینستاگرام خارج خواهد شد و در لیست فالوور های ازدست رفته نمایش داده نخواهد شد."
+        app:color="#3A3A3A" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/remove"
+        style="@style/BackRedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help2"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:text="اخراج شود"
+        app:bold="true"
+        app:color="#D81B60" />
+
+    <ghasemi.abbas.unfollowyab.components.TextView
+        android:id="@+id/cancel"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@id/remove"
+        android:background="@drawable/selectable_item_background"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="خیر"
+        app:bold="true"
+        app:color="#000" />
+
+</RelativeLayout>

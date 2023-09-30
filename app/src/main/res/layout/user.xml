@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/live"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/live">
+
+            <ghasemi.abbas.unfollowyab.components.roundedimageview.RoundedImageView
+                android:id="@+id/pic"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                app:riv_border_color="#FFFFFF"
+                app:riv_border_width="2dp"
+                app:riv_oval="true" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/live"
+            android:layout_alignBottom="@id/live"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/live"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:id="@+id/posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14dp"
+                    app:bold="true"
+                    app:color="#000" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="پست ها"
+                    android:textSize="14dp"
+                    app:color="#000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/followersLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:orientation="vertical">
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:id="@+id/followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14dp"
+                    app:bold="true"
+                    app:color="#000" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دنبال کننده"
+                    android:textSize="14dp"
+                    app:color="#000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/followingsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="80dp"
+                android:background="@drawable/selectable_item_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:id="@+id/followings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14dp"
+                    app:bold="true"
+                    app:color="#000" />
+
+                <ghasemi.abbas.unfollowyab.components.TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دنبال شونده"
+                    android:textSize="14dp"
+                    app:color="#000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ghasemi.abbas.unfollowyab.components.TextView
+            android:id="@+id/fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/live"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="-5dp"
+            android:text="full name"
+            android:textSize="14dp"
+            android:visibility="gone"
+            app:color="#000" />
+
+        <ghasemi.abbas.unfollowyab.components.TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullname"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="-5dp"
+            android:text="bio"
+            android:textIsSelectable="true"
+            android:textSize="14dp"
+            android:visibility="gone"
+            app:color="#000" />
+
+        <ghasemi.abbas.unfollowyab.components.TextView
+            android:id="@+id/profile_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="-5dp"
+            android:text="bio"
+            android:textSize="15dp"
+            android:visibility="gone"
+            app:color="#000" />
+
+        <LinearLayout
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_context"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginVertical="5dp">
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/btn"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="@drawable/follow_demo"
+                android:gravity="center"
+                android:text=""
+                app:bold="true"
+                app:color="#000" />
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/openInWindow"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_demo"
+                android:gravity="center"
+                android:text="باز کردن در اینستاگرام"
+                app:bold="true"
+                app:color="#000" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/highlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settings"
+            android:layout_marginVertical="7dp"
+            android:clipToPadding="false"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/highlight"
+            android:background="#e2e2e2" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="-2dp" />
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/is_private"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="پیچ کاربر خصوصی است."
+                android:visibility="gone"
+                app:bold="true"
+                app:color="#404040" />
+
+            <ProgressBar
+                android:id="@+id/progressPosts"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pageNotFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="30dp"
+            android:visibility="gone">
+
+            <ghasemi.abbas.unfollowyab.components.roundedimageview.RoundedImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_follow"
+                app:riv_border_color="#000000"
+                app:riv_border_width="2dp"
+                app:riv_oval="true" />
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_demo"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="پیچ پیدا نشد."
+                app:bold="true"
+                app:color="#000000" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pageNeedRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="30dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_round_refresh_24" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

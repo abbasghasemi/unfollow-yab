@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ghasemi.abbas.unfollowyab.components.EditText
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:hint="لینک پست را وارد نمائید" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_url"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        android:paddingVertical="7dp">
+
+        <ghasemi.abbas.unfollowyab.components.GradientButton
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            app:gb_drawable="@drawable/gradient_def"
+            app:gb_text="بستن" />
+
+        <ghasemi.abbas.unfollowyab.components.GradientButton
+            android:id="@+id/download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:gb_drawable="@drawable/gradient_blue"
+            app:gb_text="بررسی" />
+    </LinearLayout>
+</RelativeLayout>

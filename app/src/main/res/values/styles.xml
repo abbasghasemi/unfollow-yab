@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="fontFamily">@font/sans</item>
+    </style>
+
+    <style name="TranslucentMainActivity" parent="AppTheme">
+<!--        <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="ThemeBottomSheetDialog" parent="Widget.MaterialComponents.BottomSheet">
+    </style>
+
+    <style name="TranslucentAppTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="Theme_BackRedTextView">
+        <item name="colorControlHighlight">@color/RedControlHighlight</item>
+    </style>
+
+    <style name="Theme_BlockBackground">
+        <item name="colorControlHighlight">#1A000000</item>
+    </style>
+
+    <style name="BackRedTextView">
+        <item name="android:theme">@style/Theme_BackRedTextView</item>
+        <item name="android:background">@drawable/selectable_item_background</item>
+    </style>
+
+    <style name="BlockBackground">
+        <item name="android:theme">@style/Theme_BlockBackground</item>
+        <item name="android:foreground">?selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="anim_dialog">
+        <item name="android:windowEnterAnimation">@anim/enter_dialog</item>
+        <item name="android:windowExitAnimation">@anim/exit_dialog</item>
+    </style>
+</resources>

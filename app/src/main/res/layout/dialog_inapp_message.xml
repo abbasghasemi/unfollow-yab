@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="14dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center_horizontal"
+                android:text="Title"
+                android:textSize="19dp"
+                app:bold="true"
+                app:color="#000" />
+
+            <ghasemi.abbas.unfollowyab.components.TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="Body"
+                android:textSize="17dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Btn1"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="10dp"
+                app:iconGravity="start"
+                app:iconTint="#fff" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Btn2"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="10dp"
+                app:iconGravity="start"
+                app:iconTint="#fff" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="بستن"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                app:cornerRadius="10dp"
+                app:iconGravity="start"
+                app:backgroundTint="@color/colorAccent"
+                app:iconTint="@color/colorAccent"
+                app:strokeColor="@color/colorAccent" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

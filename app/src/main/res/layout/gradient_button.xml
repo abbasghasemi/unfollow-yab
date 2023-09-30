@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_button"
+        style="@style/BlockBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:foreground="?selectableItemBackground"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp">
+
+        <ghasemi.abbas.unfollowyab.components.TextView
+            android:id="@+id/text_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="-4dp"
+            android:singleLine="true"
+            android:textSize="18dp"
+            app:bold="true"
+            app:color="#FFFFFF" />
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

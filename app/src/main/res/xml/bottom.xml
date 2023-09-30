@@ -1,0 +1,27 @@
+<tabs>
+    <tab
+        activeColor="#647781"
+        icon="@drawable/ic_about"
+        id="@+id/tab_about_us"
+        inActiveColor="#78909C"
+        title="درباره ما" />
+
+    <tab
+        activeColor="#647781"
+        icon="@drawable/ic_upgrade"
+        id="@+id/tab_upgrade"
+        inActiveColor="#78909C"
+        title="ارتقا" />
+    <tab
+        activeColor="#647781"
+        icon="@drawable/ic_chart"
+        id="@+id/tab_statistics"
+        inActiveColor="#78909C"
+        title="آمار" />
+    <tab
+        activeColor="#647781"
+        icon="@drawable/ic_home"
+        id="@+id/tab_home"
+        inActiveColor="#78909C"
+        title="خانه" />
+</tabs>
